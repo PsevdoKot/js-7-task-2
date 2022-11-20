@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Погода</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <main>
+    <ul class="weather container list-reset">
+      <li class="widget" id="widget_0">
+        <div class="widget__form">
+          <div class="widget__input">
+            <label for="latitude" class="widget__input-label">Широта</label>
+            <input type="text" class="widget__input-latitude" name="latitude" id="latitude">
+          </div>
+          <div class="widget__input">
+            <label for="longitude" class="widget__input-label">Долгота</label>
+            <input type="text" class="widget__input-longitude" name="longitude" id="longitude">
+          </div>
+          <span class="widget__invalid-text" id="widget__invalid-text">Неверно введены данные ширины и долготы</span>
+          <button type="submit" class="widget__submit-btn btn_reset">Показать погоду</button>
+        </div>
+        <span class="widget__loading-text" id="widget__loading-text">Загрузка...</span>
+        <div class="widget__loc-info">
+          <div class="widget__loc-name"></div>
+          <div class="widget__loc-time"></div>
+        </div>
+        <div class="widget__main-info">
+          <div class="widget__temp"></div>
+          <img src="" alt="" class="widget__icon">
+          <div class="widget__desc"></div>
+        </div>
+        <div class="widget__add-info">
+          <div class="widget__wind-strength">Скорость ветра: <span class="widget__wind-strength-space"></span> м/с</div>
+          <div class="widget__pressure">Давление: <span class="widget__pressure-space"></span> мм рт ст</div>
+          <div class="widget__humidity">Влажность: <span class="widget__humidity-space"></span>%</div>
+          <div class="widget__temp-feels-like">Ощущается как: <span class="widget__temp-feels-like-space"></span>°C</div>
+        </div>
+        <div class="widget__map" id="widget__map-0"></div>
+      </li>
+    </ul>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <button class="footer__more-widget-btn">Создать виджет</button>
+    </div>
+  </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=92c4f61e-5e6f-4296-a485-98012bd22c3e&lang=ru_RU" type="text/javascript"></script>
+  <script src="js/weather_app.js"></script>
+  <script src="js/weather_widget.js"></script>
+  <script src="js/onload.js"></script>
+</body>
+</html>
