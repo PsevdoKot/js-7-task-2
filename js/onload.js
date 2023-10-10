@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
   const weatherApp = new WeatherApplication();
 
   const initialWidget = document.querySelector('.widget').cloneNode(true);
-  document.querySelector('.footer__more-widget-btn').addEventListener('click', () => {
+  document.querySelector('.header__more-widget-btn').addEventListener('click', () => {
     let newWidgetId = weatherApp.getLastWidgetId() + 1;
     const newWidgetHTML = initialWidget.cloneNode(true);
     newWidgetHTML.id = `widget_${newWidgetId}`;
