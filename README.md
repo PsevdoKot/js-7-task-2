@@ -1,4 +1,4 @@
-Адрес приложения - http://weather-app.webtm.ru/
+Адрес приложения - https://psevdokot.github.io/js-7-task-2/
 
 Простое приложение погоды. Возможности:
 
